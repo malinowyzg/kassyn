@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STYKI App</title>
+    <title>KA$$YNO-APP</title>
     
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="apple-touch-icon" href="logo.png">
@@ -824,7 +824,7 @@
                <img src="logo.png" alt="Logo STYKI" class="w-full h-full object-contain">
              </div>
             <h1 class="gold-title text-3xl font-extrabold tracking-tight mb-2">WPISZ PIN</h1>
-            <p class="text-slate-400 text-sm font-medium mb-8 text-center">Wprowadź swój osobisty kod PIN</p>
+            <p class="text-slate-400 text-sm font-medium mb-8 text-center">Po Zalogowaniu Znajdziesz masę interesujących ciebie informacji! Takich jak kody bonusowe, linki z zaproszeniami dzięki którym zdobędziesz jeszcze więcej Darmowych Obrotów lub Gotówki!</p>
 
             <div class="flex gap-5 mb-10">
                 <div id="pin-dot-1" class="w-4 h-4 rounded-full border-2 border-white/20 transition-all duration-200"></div>
@@ -882,21 +882,12 @@
 
         <div class="mt-auto pt-4 border-t border-white/5 text-xs text-slate-400 flex flex-col gap-3 shrink-0">
             <div id="user-profile-box" class="flex flex-col bg-white/5 p-4 rounded-xl border border-white/10 transition-all duration-300">
-                <span class="text-[10px] uppercase tracking-widest text-slate-500 mb-1 font-bold">Zalogowany jako:</span>
                 <span id="logged-user-name" class="text-white font-extrabold text-base truncate tracking-wide">Gość</span>
                 
                 <div class="mt-2 flex">
                     <span id="logged-user-badge" class="px-2.5 py-0.5 rounded-md font-mono text-[10px] font-bold uppercase tracking-wider border transition-colors duration-300">
                         Rola
                     </span>
-                </div>
-                <div class="density-control">
-                    <label for="interface-density">Widok</label>
-                    <select id="interface-density" onchange="saveMyInterfaceDensity(this.value)">
-                        <option value="standard">Standard</option>
-                        <option value="compact">Kompaktowy</option>
-                        <option value="dense">Gęsty</option>
-                    </select>
                 </div>
             </div>
             <button onclick="logout()" class="w-full py-2.5 bg-red-500/10 hover:bg-red-500/20 text-red-400 font-black tracking-widest uppercase rounded-lg transition-all flex items-center justify-center gap-2 active:scale-95">
@@ -911,7 +902,7 @@
             <header class="shrink-0">
                 <div class="flex items-center gap-3">
                     <h2 class="gold-title text-2xl font-black tracking-tight">PULPIT</h2>
-                    <span class="gold-chip px-2 py-1 rounded-md text-[9px] font-black tracking-[0.16em] uppercase">STYKI PRO</span>
+                    <span class="gold-chip px-2 py-1 rounded-md text-[9px] font-black tracking-[0.16em] uppercase">KA$$YNO -APP</span>
                 </div>
                 <p class="text-slate-400 text-xs mt-0.5">Asortyment magazynowy, komunikacja i godziny pracy zespołu na jednym ekranie.</p>
             </header>
@@ -919,7 +910,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 shrink-0 animate-fade-in">
                 <div class="glass-card inventory-card p-4 flex flex-col gap-1 relative overflow-hidden group">
                     <div class="absolute top-0 left-0 w-full h-1 bg-cyan-500"></div>
-                    <span class="text-[10px] text-cyan-400 font-bold uppercase tracking-widest">Farba Biała</span>
+                    <span class="text-[10px] text-cyan-400 font-bold uppercase tracking-widest">GOLDBET</span>
                     <span id="rate-farba" class="text-2xl font-black text-white">450 <span class="text-xs font-medium text-slate-400">PLN</span></span>
                     
                     <div class="flex justify-between items-end mt-1">
@@ -1488,7 +1479,7 @@
                 }
             } catch (err) {
                 console.error("Firebase auth error:", err);
-                showToast("Błąd autoryzacji serwera", "error");
+                showToast("ZAPAMIĘTAJ SWÓJ PIN!", "error");
             }
         }
 
@@ -2126,10 +2117,9 @@
                             <span class="text-[9px] text-slate-400 font-mono">PIN: <span class="font-bold text-purple-400">${u.pin}</span></span>
                         </div>
                         <div class="flex items-center gap-2 shrink-0">
-                            <select onchange="updateUserInterfaceDensity('${u.id}', this.value)" class="bg-black/30 border border-amber-400/20 rounded-lg px-2 py-1.5 text-[9px] font-bold text-amber-100 outline-none">
+                            <select onchange="updateUserInterfaceDensity('${u.id}', this.value)" class="bg-black/2 border border-amber-400/20 rounded-lg px-2 py-1.5 text-[3px] font-bold text-amber-100 outline-none">
                                 <option value="standard" ${userDensity === 'standard' ? 'selected' : ''}>Standard</option>
                                 <option value="compact" ${userDensity === 'compact' ? 'selected' : ''}>Kompakt</option>
-                                <option value="dense" ${userDensity === 'dense' ? 'selected' : ''}>Gęsty</option>
                             </select>
                             <button onclick="deleteUserAccount('${u.id}', '${u.name}')" class="px-2 py-1.5 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-lg transition-colors text-[10px]">USUŃ</button>
                         </div>
